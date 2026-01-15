@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { 
+            font-family: 'Cairo', sans-serif; 
+            margin: 0; padding: 15px;
+            min-width: 300px; max-width: 500px; /* Responsive range */
+            transition: all 0.3s ease; /* Smooth size transitions */
+        }
+        .hidden { display: none; }
+        #thikr-text { font-size: 1.2rem; margin-bottom: 20px; }
+        .controls { display: flex; justify-content: space-between; gap: 10px; }
+        button { cursor: pointer; padding: 8px 15px; border-radius: 5px; border: 1px solid #ccc; }
+    </style>
+</head>
+<body>
+    <div id="menu-view">
+        <h2>أذكار المسلم</h2>
+        <button id="btn-morning">أذكار الصباح</button>
+        <button id="btn-night">أذكار المساء</button>
+        <button id="btn-specific">ذكر معين</button>
+    </div>
+
+    <div id="session-view" class="hidden">
+        <div id="thikr-text"></div>
+        <div class="controls">
+            <button id="btn-counter">0</button>
+            <button id="btn-back">السابق</button>
+            <button id="btn-exit">خروج</button>
+        </div>
+        <p style="font-size: 0.8rem; color: #666; margin-top: 10px;">يمكنك الضغط على المسطرة (Space) لزيادة العداد</p>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
